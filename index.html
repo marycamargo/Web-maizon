@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MAIZON VERA S.A.S. - Gafas de sol y accesorios.">
+    <title>MAIZON VERA | Tu estilo. Tu mirada.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- ENCABEZADO -->
+<header class="header">
+    <div class="contenedor barra">
+        <a href="#inicio" class="logo">
+            MAIZON VERA
+            <span>TU ESTILO. TU MIRADA.</span>
+        </a>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Abrir menú">☰</button>
+
+        <nav class="nav" id="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#mision-vision">Misión y visión</a>
+            <a href="#valores">Valores</a>
+            <a href="#objetivos">Objetivos</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#perfil" class="solo-cliente">Mi perfil</a>
+            <a href="#administracion" class="solo-admin">Administración</a>
+        </nav>
+
+        <div class="acciones">
+            <button class="btn btn-claro solo-invitado" id="btn-login">Iniciar sesión</button>
+            <button class="btn solo-invitado" id="btn-registro">Registrarse</button>
+            <button class="btn btn-claro solo-sesion" id="btn-salir">Salir</button>
+            <button class="btn btn-carrito" id="btn-carrito">
+                Bolsa <span id="contador-carrito">0</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- PORTADA -->
+    <section class="hero" id="inicio">
+        <div class="hero-capa"></div>
+        <div class="contenedor hero-contenido">
+            <p class="etiqueta">ELEGANCIA · CALIDAD · PERSONALIDAD</p>
+            <h1>Tu estilo.<br>Tu mirada.</h1>
+            <p>
+                Descubre una colección de gafas de sol y accesorios
+                que combinan diseño, comodidad y personalidad.
+            </p>
+            <a href="#productos" class="btn btn-blanco btn-grande">
+                DESCUBRIR COLECCIÓN <span>→</span>
+            </a>
+        </div>
+        <div class="hero-numero">01 / MAIZON VERA</div>
+    </section>
+
+    <!-- FRANJA -->
+    <section class="franja">
+        <div class="contenedor franja-contenido">
+            <span>DISEÑOS MODERNOS</span>
+            <i>✦</i>
+            <span>ESTILO Y COMODIDAD</span>
+            <i>✦</i>
+            <span>ATENCIÓN PERSONALIZADA</span>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="seccion productos" id="productos">
+        <div class="contenedor">
+            <div class="encabezado-seccion">
+                <p class="etiqueta">NUESTRA SELECCIÓN</p>
+                <h2>Encuentra tu estilo</h2>
+                <p>Detalles que hacen la diferencia.</p>
+            </div>
+
+            <div class="busqueda">
+                <span>⌕</span>
+                <input type="search" id="buscador"
+                       placeholder="¿Qué estás buscando?">
+            </div>
+
+            <!-- LOS PRODUCTOS ESTÁN EN HTML PARA QUE SIEMPRE SE VEAN -->
+            <div id="contenedor-productos" class="productos-grid">
+
+                <article class="producto-card" data-producto="1">
+                    <div class="producto-imagen">
+                        <span class="producto-etiqueta">DESTACADO</span>
+                        <img src="imagenes/gafas1.jpg"
+                             alt="Montura Aviador Titanium Gold">
+                    </div>
+                    <div class="producto-info">
+                        <span class="categoria">MONTURAS</span>
+                        <h3>Montura Aviador Clásica "Titanium Gold"</h3>
+                        <p>Titanio ultraligero, acabado oro 18k.</p>
+                        <div class="producto-pie">
+                            <strong class="producto-precio">$339.900 COP</strong>
+                            <button class="agregar-btn" data-agregar="1"
+                                    aria-label="Agregar Titanium Gold">+</button>
+                        </div>
+                        <span class="stock-texto" data-stock="1">15 disponibles</span>
+                    </div>
+                </article>
+
+                <article class="producto-card" data-producto="2">
+                    <div class="producto-imagen">
+                        <img src="imagenes/gafas2.jpg"
+                             alt="Cordón Sujetador Urban Chain">
+                    </div>
+                    <div class="producto-info">
+                        <span class="categoria">ACCESORIOS</span>
+                        <h3>Cordón Sujetador Elegante "Urban Chain"</h3>
+                        <p>Acero inoxidable, diseño moderno.</p>
+                        <div class="producto-pie">
+                            <strong class="producto-precio">$87.900 COP</strong>
+                            <button class="agregar-btn" data-agregar="2"
+                                    aria-label="Agregar Urban Chain">+</button>
+                        </div>
+                        <span class="stock-texto" data-stock="2">12 disponibles</span>
+                    </div>
+                </article>
+
+                <article class="producto-card" data-producto="3">
+                    <div class="producto-imagen">
+                        <img src="imagenes/gafas3.jpg"
+                             alt="Estuche Executive Leather Guard">
+                    </div>
+                    <div class="producto-info">
+                        <span class="categoria">ACCESORIOS</span>
+                        <h3>Estuche Rígido "Executive Leather Guard"</h3>
+                        <p>Protección superior, cierre magnético.</p>
+                        <div class="producto-pie">
+                            <strong class="producto-precio">$119.900 COP</strong>
+                            <button class="agregar-btn" data-agregar="3"
+                                    aria-label="Agregar Executive Leather Guard">+</button>
+                        </div>
+                        <span class="stock-texto" data-stock="3">10 disponibles</span>
+                    </div>
+                </article>
+
+            </div>
+            <p id="mensaje-busqueda" class="mensaje-busqueda"></p>
+        </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="seccion nosotros fondo-gris" id="nosotros">
+        <div class="contenedor dos-columnas">
+            <div class="imagen-nosotros">
+                <img src="imagenes/fondo.jpg" alt="MAIZON VERA">
+                <div class="imagen-firma">MAIZON VERA S.A.S.</div>
+            </div>
+
+            <div class="texto-nosotros">
+                <p class="etiqueta">CONOCE NUESTRA EMPRESA</p>
+                <h2>Más que un accesorio, una expresión de estilo.</h2>
+                <p>
+                    MAIZON VERA S.A.S. es una empresa colombiana
+                    dedicada a la comercialización de gafas de sol
+                    y accesorios, enfocada en ofrecer productos que
+                    combinan diseño, calidad y funcionalidad.
+                </p>
+                <p>
+                    Buscamos brindar a nuestros clientes opciones
+                    modernas, cómodas y accesibles que complementen
+                    su estilo personal y contribuyan al cuidado
+                    de sus ojos frente a los rayos solares.
+                </p>
+                <p>
+                    Nuestra propuesta se fundamenta en la atención
+                    al cliente, la calidad de los productos y una
+                    experiencia de compra práctica y agradable.
+                </p>
+                <a href="#mision-vision" class="enlace-elegante">
+                    CONOCE NUESTRO PROPÓSITO →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTEXTO -->
+    <section class="seccion">
+        <div class="contenedor contexto">
+            <div class="encabezado-seccion">
+                <p class="etiqueta">NUESTRO ORIGEN</p>
+                <h2>Contexto empresarial</h2>
+            </div>
+            <p>
+                MAIZON VERA S.A.S. surge como una iniciativa empresarial
+                orientada a participar en el mercado colombiano mediante
+                la comercialización de gafas de sol y accesorios.
+            </p>
+            <p>
+                La empresa identifica la importancia de los productos
+                de protección solar en la vida cotidiana, así como el
+                interés de los consumidores por adquirir diseños que
+                reflejen su personalidad y estilo.
+            </p>
+            <p>
+                Por esta razón, MAIZON VERA busca ofrecer productos
+                modernos, cómodos y accesibles, acompañados de
+                información clara y una atención amable.
+            </p>
+        </div>
+    </section>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <section class="seccion fondo-gris" id="mision-vision">
+        <div class="contenedor">
+            <div class="encabezado-seccion">
+                <p class="etiqueta">NUESTRO PROPÓSITO</p>
+                <h2>Misión y visión</h2>
+            </div>
+
+            <div class="tarjetas-info">
+                <article class="tarjeta-info">
+                    <span class="numero-tarjeta">01</span>
+                    <h3>Nuestra misión</h3>
+                    <p>
+                        En MAIZON VERA S.A.S. nos dedicamos a la
+                        comercialización de gafas de sol de calidad,
+                        ofreciendo diseños modernos, cómodos y
+                        accesibles que permitan a nuestros clientes
+                        proteger sus ojos de los rayos solares mientras
+                        expresan su estilo y personalidad. Nos
+                        comprometemos a brindar una excelente atención
+                        y satisfacer las necesidades de cada cliente.
+                    </p>
+                </article>
+
+                <article class="tarjeta-info">
+                    <span class="numero-tarjeta">02</span>
+                    <h3>Nuestra visión</h3>
+                    <p>
+                        Para el año 2030, MAIZON VERA S.A.S. busca ser
+                        una empresa reconocida en el mercado colombiano
+                        por la comercialización de gafas de sol,
+                        destacándose por la calidad de sus productos,
+                        sus diseños modernos, precios accesibles y
+                        excelente servicio al cliente.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALORES -->
+    <section class="seccion" id="valores">
+        <div class="contenedor">
+            <div class="encabezado-seccion">
+                <p class="etiqueta">LO QUE NOS IDENTIFICA</p>
+                <h2>Nuestros valores</h2>
+            </div>
+
+            <div class="valores-grid">
+                <article class="valor-card">
+                    <span>01</span>
+                    <h3>Calidad</h3>
+                    <p>
+                        Ofrecer gafas de sol con materiales y filtros
+                        de protección UV adecuados, garantizando
+                        productos confiables y duraderos.
+                    </p>
+                </article>
+
+                <article class="valor-card">
+                    <span>02</span>
+                    <h3>Responsabilidad</h3>
+                    <p>
+                        Comprometernos con el cuidado y la protección
+                        visual de nuestros clientes, brindando
+                        información clara sobre nuestros productos.
+                    </p>
+                </article>
+
+                <article class="valor-card">
+                    <span>03</span>
+                    <h3>Innovación</h3>
+                    <p>
+                        Mantenernos actualizados con las últimas
+                        tendencias de moda, ofreciendo diseños
+                        modernos que se adapten a los gustos y
+                        estilos de nuestros clientes.
+                    </p>
+                </article>
+
+                <article class="valor-card">
+                    <span>04</span>
+                    <h3>Compromiso</h3>
+                    <p>
+                        Trabajar constantemente para satisfacer
+                        las necesidades de nuestros clientes,
+                        ofreciendo una atención amable, productos
+                        de calidad y una experiencia de compra agradable.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJETIVOS -->
+    <section class="seccion fondo-gris" id="objetivos">
+        <div class="contenedor">
+            <div class="encabezado-seccion">
+                <p class="etiqueta">NUESTRAS METAS</p>
+                <h2>Objetivos organizacionales</h2>
+            </div>
+
+            <article class="objetivo-general">
+                <span class="etiqueta">OBJETIVO GENERAL</span>
+                <p>
+                    Comercializar gafas de sol de calidad, con diseños
+                    modernos y precios accesibles, ofreciendo a nuestros
+                    clientes productos que combinen moda, comodidad y
+                    protección visual, logrando el crecimiento y
+                    reconocimiento de MAIZON VERA S.A.S. en el mercado.
+                </p>
+            </article>
+
+            <div class="tarjetas-info">
+                <article class="tarjeta-info">
+                    <span class="numero-tarjeta">01</span>
+                    <h3>Ofrecer variedad</h3>
+                    <p>
+                        Contar con diferentes estilos, colores y diseños
+                        de gafas de sol que se adapten a los gustos
+                        y necesidades de los clientes.
+                    </p>
+                </article>
+
+                <article class="tarjeta-info">
+                    <span class="numero-tarjeta">02</span>
+                    <h3>Satisfacer a los clientes</h3>
+                    <p>
+                        Brindar una atención amable y personalizada,
+                        procurando que cada cliente tenga una
+                        experiencia de compra positiva.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFIL CLIENTE -->
+    <section class="seccion fondo-gris solo-cliente" id="perfil">
+        <div class="contenedor">
+            <div class="encabezado-seccion">
+                <p class="etiqueta">TU CUENTA</p>
+                <h2>Mi perfil</h2>
+            </div>
+
+            <div class="panel">
+                <form id="form-perfil">
+                    <div class="campo">
+                        <label for="perfil-nombre">Nombre completo</label>
+                        <input id="perfil-nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="perfil-email">Correo electrónico</label>
+                        <input id="perfil-email" type="email" disabled>
+                    </div>
+                    <button class="btn" type="submit">Guardar cambios</button>
+                </form>
+            </div>
+
+            <div class="panel">
+                <h3>Historial de pedidos</h3>
+                <div id="historial-pedidos"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADMINISTRACIÓN -->
+    <section class="seccion fondo-gris solo-admin" id="administracion">
+        <div class="contenedor">
+            <div class="encabezado-seccion">
+                <p class="etiqueta">CONTROL DE LA TIENDA</p>
+                <h2>Panel administrativo</h2>
+            </div>
+
+            <div class="estadisticas">
+                <div class="estadistica">
+                    <span>Productos</span>
+                    <strong id="admin-total-productos">0</strong>
+                </div>
+                <div class="estadistica">
+                    <span>Pedidos</span>
+                    <strong id="admin-total-pedidos">0</strong>
+                </div>
+                <div class="estadistica">
+                    <span>Clientes</span>
+                    <strong id="admin-total-clientes">0</strong>
+                </div>
+                <div class="estadistica">
+                    <span>Ventas simuladas</span>
+                    <strong id="admin-total-ventas">$0</strong>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h3>Inventario</h3>
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Existencias</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-inventario"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h3>Pedidos recibidos</h3>
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Número</th>
+                                <th>Cliente</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                                <th>Actualizar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-pedidos"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h3>Clientes registrados</h3>
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-clientes"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="seccion" id="contacto">
+        <div class="contenedor"> 
+            <div class="encabezado-seccion">
+                <p class="etiqueta">ESTAMOS PARA AYUDARTE</p>
+                <h2>Comunicate con nosotros :)</h2>
+                <p>Nos encantará conocer tus preguntas y comentarios.</p>
+            </div>
+
+            <div class="contacto">
+                <div class="contacto-info">
+                    <p class="etiqueta">MAIZON VERA S.A.S.</p>
+                    <h3>Tu estilo.<br>Tu mirada.</h3>
+                    <p>WhatsApp: +57 320 412 7214</p>
+                    <p>Colombia</p>
+                </div>
+
+                <form id="form-contacto">
+                    <div class="campo">
+                        <label for="contacto-nombre">Nombre</label>
+                        <input id="contacto-nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="contacto-email">Correo electrónico</label>
+                        <input id="contacto-email" type="email">
+                    </div>
+                    <div class="campo">
+                        <label for="contacto-mensaje">Mensaje</label>
+                        <textarea id="contacto-mensaje" rows="4" required></textarea>
+                    </div>
+                    <button class="btn btn-grande" type="submit">
+                        ENVIAR MENSAJE →
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="footer">
+    <div class="contenedor footer-contenido">
+        <div>
+            <h2>MAIZON VERA</h2>
+            <p>TU ESTILO. TU MIRADA.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <p class="copyright">
+            © 2026 MAIZON VERA S.A.S. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+<!-- BOTONES FLOTANTES -->
+<a class="whatsapp-flotante"
+   href="https://wa.me/573204127214"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contactar por WhatsApp"
+   title="WhatsApp">✆</a>
+
+<button class="subir-flotante" id="btn-subir"
+        aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+<!-- CARRITO LATERAL -->
+<div class="carrito-fondo" id="carrito-fondo">
+    <aside class="carrito-panel">
+        <div class="carrito-cabecera">
+            <div>
+                <p class="etiqueta">MAIZON VERA</p>
+                <h2>Tu bolsa</h2>
+            </div>
+            <button class="cerrar" id="cerrar-carrito">×</button>
+        </div>
+
+        <div id="carrito-items"></div>
+
+        <div class="carrito-total">
+            <span>Subtotal</span>
+            <strong id="carrito-subtotal">$0</strong>
+        </div>
+
+        <p class="nota">
+            Esta tienda es una demostración. No se realizan pagos reales.
+        </p>
+
+        <button class="btn btn-claro ancho" id="vaciar-carrito">
+            Vaciar bolsa
+        </button>
+        <button class="btn ancho" id="finalizar-compra">
+            Confirmar pedido
+        </button>
+    </aside>
+</div>
+
+<!-- INICIAR SESIÓN -->
+<div class="modal" id="modal-login">
+    <div class="modal-contenido">
+        <button class="modal-cerrar" data-cerrar="modal-login">×</button>
+        <p class="etiqueta">BIENVENIDO DE NUEVO</p>
+        <h2>Iniciar sesión</h2>
+
+        <form id="form-login">
+            <div class="campo">
+                <label for="login-email">Correo electrónico</label>
+                <input id="login-email" type="email" required>
+            </div>
+            <div class="campo">
+                <label for="login-password">Contraseña</label>
+                <input id="login-password" type="password" required>
+            </div>
+            <button class="btn ancho" type="submit">INGRESAR</button>
+        </form>
+    </div>
+</div>
+
+<!-- REGISTRO -->
+<div class="modal" id="modal-registro">
+    <div class="modal-contenido">
+        <button class="modal-cerrar" data-cerrar="modal-registro">×</button>
+        <p class="etiqueta">ÚNETE A NOSOTROS</p>
+        <h2>Crear cuenta</h2>
+
+        <form id="form-registro">
+            <div class="campo">
+                <label for="registro-nombre">Nombre completo</label>
+                <input id="registro-nombre" required>
+            </div>
+            <div class="campo">
+                <label for="registro-email">Correo electrónico</label>
+                <input id="registro-email" type="email" required>
+            </div>
+            <div class="campo">
+                <label for="registro-password">Contraseña</label>
+                <input id="registro-password" type="password"
+                       minlength="6" required>
+            </div>
+            <button class="btn ancho" type="submit">CREAR CUENTA</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
